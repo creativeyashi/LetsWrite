@@ -1,0 +1,18 @@
+<h4 style="color:blue"> Articles World !!</h4>
+<br>
+<br>
+<h4>My blog studio has <%= Article.public_count %> articles, Kindly go through them and provide the feedback !<h4>
+
+<ul >
+  <% @articles.each do |article| %>
+    <li>
+      <%= link_to article.title, article %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "New Article", new_article_path %>
+
+
+
+
